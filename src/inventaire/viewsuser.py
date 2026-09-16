@@ -11,7 +11,7 @@ from django.conf import settings
 
 from .forms import *
 from .models import *
-
+# connection obligatoire pour une certaine ressource
 def users(request, page=1):
     log = request.user.is_authenticated
     if not log:
@@ -133,7 +133,7 @@ def usersave(request, id=None):
 
     return HttpResponseBadRequest("Requête incorrecte")
 
-
+# suppresion du compte
 def userdelete(request, id):
     log = request.user.is_authenticated
     if not log:
