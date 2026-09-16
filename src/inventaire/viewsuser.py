@@ -11,7 +11,7 @@ from django.conf import settings
 
 from .forms import *
 from .models import *
-# certaine juridiction nécessaire pour obtenir une certaine ressource
+# certains droits nécessaires pour obtenir une certaine ressource
 def users(request, page=1):
     log = request.user.is_authenticated
     if not log:
