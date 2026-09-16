@@ -11,7 +11,7 @@ from django.conf import settings
 
 from .forms import *
 from .models import *
-# connection obligatoire pour une certaine ressource
+# certaine juridiction nécessaire pour obtenir une certaine ressource
 def users(request, page=1):
     log = request.user.is_authenticated
     if not log:
@@ -43,7 +43,7 @@ def users(request, page=1):
 
     return render(request, "inventaire/users.html",context)
 
-
+# accès aux contenus du site
 def userssearch(request, search="", page=1):
     log = request.user.is_authenticated
     if not log:
@@ -90,7 +90,7 @@ def user(request, id=None):
 
     return render(request, "inventaire/userform.html", context)
 
-
+# accès au profil utilisateur
 def usersave(request, id=None):
     log = request.user.is_authenticated
     if not log:
